@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect("db", "root", "root", "northwind");
+include('db_conf.php');
 $sql = "SELECT * FROM users where email ='".$_POST['email']."' and password = md5('".$_POST['password']."')";
 $result = mysqli_query($con, $sql);
 if(mysqli_num_rows($result) == 1){

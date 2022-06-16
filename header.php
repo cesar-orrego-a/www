@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('db_conf.php');
 $header_html = '<html>
     <head>
         <title>SIN - 2022-I</title>
@@ -9,7 +10,6 @@ $header_html = '<html>
     </head>
     <body>';
     if(isset($_SESSION["user_connected_id"])){
-      $con = mysqli_connect("db", "root", "root", "northwind");
       $sql = "SELECT * FROM users where id = '".$_SESSION["user_connected_id"]."'";
       $result = mysqli_query($con, $sql);
       $user = mysqli_fetch_array($result);

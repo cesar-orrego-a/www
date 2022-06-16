@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect("db", "root", "root", "northwind");
+include('../db_conf.php');
 $sql = "DELETE FROM customers where CustomerID = '".$_GET['id']."'";
 
 $first_letter = substr($_GET['id'], 0, 1);

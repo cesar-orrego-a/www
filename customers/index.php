@@ -2,9 +2,10 @@
        <?php
        include '../header.php';
        echo $header_html;
-       $con = mysqli_connect("db", "root", "root", "northwind");
        $sql = "SELECT * FROM customers";
        $result = mysqli_query($con, $sql);
+
+       echo getenv("PHP_PRUEBA_ENV");
         ?>
 
         <div class="container-fluid p-5 bg-primary text-white text-center">

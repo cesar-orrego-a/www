@@ -1,7 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect("db", "root", "root", "northwind");
-
+include('../db_conf.php');
 $customer_id = $_POST['CustomerID'];
 $company_name = $_POST['CompanyName'];
 $contact_name = $_POST['ContactName'];

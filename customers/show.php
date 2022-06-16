@@ -1,7 +1,6 @@
 <?php
   include '../header.php';
   echo $header_html;
-  $con = mysqli_connect("db", "root", "root", "northwind");
   $sql = "SELECT * FROM customers where CustomerID = '".$_GET['id']."'";
   $result = mysqli_query($con, $sql);
   $customer = mysqli_fetch_array($result);
